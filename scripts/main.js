@@ -224,7 +224,7 @@ function getNewCard(){
 };
 btn.addEventListener("click", getNewCard);
 
-document.addEventListener("keydown", e=>{
+document.addEventListener("keyup", e=>{
 	if (e.code === "Space") 
 		getNewCard();
 });
