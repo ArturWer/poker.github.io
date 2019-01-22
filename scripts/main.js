@@ -215,13 +215,20 @@ function checkCards(){
 	}
 };
 
-btn.addEventListener("click", ()=>{
+function getNewCard(){
 	msg.innerHTML = "";
 	hand = getRandomHand();
 	document.body.style.backgroundColor = "darkgreen";
 	drawCards();
 	checkCards();
+};
+btn.addEventListener("click", getNewCard);
+
+document.addEventListener("keydown", e=>{
+	if (e.code === "Space") 
+		getNewCard();
 });
+
 
 drawCards();
 checkCards();
