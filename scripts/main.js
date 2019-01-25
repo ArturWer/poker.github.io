@@ -5,6 +5,7 @@ let hand = getRandomHand();
 let btn = document.querySelector(".newCards");
 let cards = document.querySelectorAll(".cards img");
 let msg = document.querySelector(".msg");
+let WIDTH = window.innerWidth;
 /* it's for better testing
 	hand = [
 	{suit:"Spades",rank:9},
@@ -13,6 +14,10 @@ let msg = document.querySelector(".msg");
 	{suit:"Diamonds",rank:"Queen"},
 	{suit:"Clubs",rank:5}];
 */
+
+function setupCardsSize(){
+	console.log(WIDTH);
+}
 function random(num){
   return Math.random()*num;
 };
@@ -229,6 +234,6 @@ document.addEventListener("keyup", e=>{
 		getNewCard();
 });
 
-
+setupCardsSize();
 drawCards();
 checkCards();
