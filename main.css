@@ -4,6 +4,9 @@ body{
 	background-color: darkgreen;
 	line-height: 1.5rem;
 }
+main{
+	text-align: center;
+}
 main .cards{
 	padding: 3rem;
 	--width: 73px;
@@ -18,9 +21,6 @@ main img{
 	font-size: 2rem;
 	border-radius: .3rem;
 	padding: .5rem;
-	position: fixed;
-	top: 2rem;
-	right: 3rem;
 }
 .newCards:hover{
 	color: white;
@@ -42,18 +42,16 @@ main img{
 	color: red;
 }
 
-@media all and (min-width: 1457px) and (max-width: 1629px){
+@media all and (min-width: 1210px) and (max-width: 1629px){
 	main img{
 		width: calc(var(--width)*3);
 		height: calc(var(--height)*3);
 	}
 }
-@media all and (max-width: 1457px) {
+@media all and (max-width: 1210px) {
 	main img{
 		width: calc(var(--width)*2.5);
 		height: calc(var(--height)*2.5);
 	}
-	.newCards{
-		font-size: 1.6rem;
-	}
+
 }
