@@ -41,3 +41,19 @@ main img{
 .red{
 	color: red;
 }
+
+@media all and (min-width: 1457px) and (max-width: 1629px){
+	main img{
+		width: calc(var(--width)*3);
+		height: calc(var(--height)*3);
+	}
+}
+@media all and (max-width: 1457px) {
+	main img{
+		width: calc(var(--width)*2.5);
+		height: calc(var(--height)*2.5);
+	}
+	.newCards{
+		font-size: 1.6rem;
+	}
+}

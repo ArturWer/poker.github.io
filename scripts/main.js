@@ -5,7 +5,7 @@ let hand = getRandomHand();
 let btn = document.querySelector(".newCards");
 let cards = document.querySelectorAll(".cards img");
 let msg = document.querySelector(".msg");
-let WIDTH = window.innerWidth;
+let images = document.querySelectorAll("main img");
 /* it's for better testing
 	hand = [
 	{suit:"Spades",rank:9},
@@ -16,7 +16,7 @@ let WIDTH = window.innerWidth;
 */
 
 function setupCardsSize(){
-	console.log(WIDTH);
+	console.log(window.innerWidth);
 }
 function random(num){
   return Math.random()*num;
@@ -228,6 +228,8 @@ function getNewCard(){
 	checkCards();
 };
 btn.addEventListener("click", getNewCard);
+
+window.addEventListener("resize", setupCardsSize);
 
 document.addEventListener("keyup", e=>{
 	if (e.code === "Space") 
